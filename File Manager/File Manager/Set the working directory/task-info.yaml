@@ -69,10 +69,10 @@ files:
   - name: tests.py
     visible: false
     learner_created: false
-feedback_link: https://hyperskill.org/projects/378/stages/2253/implement#comment
+feedback_link: https://hyperskill.org/learn/step/34447#comment
 check_profile: hyperskill_python
 status: Solved
 feedback:
   message: <html>Correct solution</html>
   time: "Fri, 20 Dec 2024 12:52:05 UTC"
-record: -1
+record: 2
