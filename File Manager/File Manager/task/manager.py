@@ -1,14 +1,26 @@
 import os
-
+import shutil
 os.chdir('module/root_folder')
 
-cmd = input()
-cmd = cmd.strip()
+while True:
+    cmd = input().strip()
+    if cmd == 'quit':
+        break
 
-while cmd != 'quit':
     try:
         if cmd == 'pwd':
             print(os.getcwd())
+
+        elif cmd.startswith('rm'):
+            path = cmd[3:]
+            if path == '':
+                print('Specify the file or directory')
+                continue
+
+            if "." in path:
+                os.remove(path)
+            else:
+                shutil.rmtree(path)
 
         elif cmd == 'ls':
             entries = os.listdir()
@@ -44,8 +56,7 @@ while cmd != 'quit':
         else:
             print('Invalid command')
 
+    except FileNotFoundError:
+        print('No such file or directory')
     except Exception as e:
         print(e)
-
-    cmd = input()
-    cmd = cmd.strip()
