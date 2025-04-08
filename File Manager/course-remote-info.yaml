@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/31642/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Mon, 23 Dec 2024 08:46:27 UTC"
+update_date: "Tue, 08 Apr 2025 16:33:14 UTC"
 stages:
   - id: 2253
     step: 34447
@@ -29,21 +29,21 @@ topics:
     - title: Parameters and options
       theory_id: 9746
     - title: Introduction to Python
-      theory_id: 47352
+      theory_id: 5204
     - title: Multi-line programs
-      theory_id: 47555
-    - title: "PEP 8: Coding style guide"
-      theory_id: 47499
+      theory_id: 5233
     - title: Taking user's input
-      theory_id: 47680
+      theory_id: 5913
     - title: Program with numbers
-      theory_id: 47734
+      theory_id: 5872
     - title: If statement
       theory_id: 5953
     - title: Else statement
       theory_id: 5932
     - title: Importing modules
       theory_id: 6019
+    - title: PyCharm basics
+      theory_id: 6193
     - title: Elif statement
       theory_id: 5926
     - title: While loop
@@ -52,8 +52,12 @@ topics:
       theory_id: 13025
     - title: os module
       theory_id: 11119
-    - title: File types
-      theory_id: 13017
+    - title: Running Python applications in PyCharm
+      theory_id: 19153
+    - title: Debugging Python applications in PyCharm
+      theory_id: 19163
+    - title: Writing first program
+      theory_id: 5208
     - title: Program execution
       theory_id: 6047
     - title: Errors
@@ -64,18 +68,14 @@ topics:
       theory_id: 11680
     - title: Exception handling
       theory_id: 6270
-    - title: Running Python applications in PyCharm
-      theory_id: 19153
-    - title: Debugging Python applications in PyCharm
-      theory_id: 19163
+    - title: File types
+      theory_id: 13017
     - title: Basic data types
-      theory_id: 47516
+      theory_id: 5852
     - title: Variables
-      theory_id: 47536
+      theory_id: 5859
     - title: "Integer arithmetic: basic operations"
-      theory_id: 47564
-    - title: "Integer arithmetic: special operations"
-      theory_id: 47917
+      theory_id: 5865
     - title: Invoking functions
       theory_id: 5891
     - title: Boolean type and operations. True and false
@@ -110,12 +110,12 @@ topics:
       theory_id: 7981
     - title: The Shutil module
       theory_id: 15831
-    - title: "Working with strings: basic methods"
-      theory_id: 6842
     - title: Quotes and multi-line strings
       theory_id: 5814
     - title: String formatting
       theory_id: 6037
+    - title: "Working with strings: basic methods"
+      theory_id: 6842
     - title: Escape sequences
       theory_id: 7130
     - title: Splitting strings and joining lists

@@ -22,6 +22,27 @@ while True:
             else:
                 shutil.rmtree(path)
 
+        elif cmd.startswith('mv'):
+            arguments = cmd[3:]
+            arguments = arguments.split(' ')
+            if len(arguments) == 2:
+                first, second = arguments
+                if second in os.listdir():
+                    print('The file or directory already exists')
+                else:
+                    shutil.move(first, second)
+            else:
+                print('Specify the current name of the file or directory and the new name')
+
+        elif cmd.startswith('mkdir'):
+            path = cmd[6:]
+            if path == '':
+                print('Specify the name of the directory to be made')
+            if path in os.listdir():
+                print('The directory already exists')
+            else:
+                os.mkdir(path)
+
         elif cmd == 'ls':
             entries = os.listdir()
             directories = sorted([entry for entry in entries if os.path.isdir(entry)])
