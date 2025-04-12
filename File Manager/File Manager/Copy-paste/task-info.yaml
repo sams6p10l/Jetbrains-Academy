@@ -12,9 +12,6 @@ files:
   - name: tests.py
     visible: false
     learner_created: false
-  - name: module/root_folder/readme.txt
-    visible: true
-    learner_created: true
   - name: readme.txt
     visible: true
     learner_created: true
@@ -25,7 +22,37 @@ files:
     visible: true
     is_binary: true
     learner_created: true
+  - name: module/root_folder/Test/readme.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/readme99.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme99.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme3.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme666.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/r1.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/r7.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme2.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme111.txt
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/34450#comment
 check_profile: hyperskill_python
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 12 Apr 2025 11:30:15 UTC"
 record: -1

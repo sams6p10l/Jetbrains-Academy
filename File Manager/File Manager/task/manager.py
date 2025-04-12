@@ -22,17 +22,45 @@ while True:
             else:
                 shutil.rmtree(path)
 
+        elif cmd.startswith('cp'):
+            arguments = cmd[3:]
+            arguments = arguments.split(' ')
+            if len(arguments) == 2:
+                source, destination = arguments
+                if source not in os.listdir():
+                    print('No such file or directory')
+                elif os.path.isdir(destination):
+                    if source in os.listdir(destination):
+                        print(f'{source} already exists in this directory')
+                    else:
+                        shutil.copy2(source, destination)
+                else:
+                    shutil.copy2(source, destination)
+            elif len(arguments) > 2:
+                print('Specify the current name of the file or directory and the new location and/or name')
+            else:
+                print('Specify the file')
+
         elif cmd.startswith('mv'):
             arguments = cmd[3:]
             arguments = arguments.split(' ')
             if len(arguments) == 2:
                 first, second = arguments
-                if second in os.listdir():
-                    print('The file or directory already exists')
+                if first not in os.listdir():
+                    print('No such file or directory')
+                    continue
+                elif os.path.isdir(second):
+                    if first in os.listdir(second):
+                        print(f'The file or directory already exists')
+                    else:
+                        shutil.move(first, second)
+                        continue
+                elif second in os.listdir():
+                    print('The file or directory already exists2')
                 else:
                     shutil.move(first, second)
             else:
-                print('Specify the current name of the file or directory and the new name')
+                print('Specify the current name of the file or directory and the new location and/or name')
 
         elif cmd.startswith('mkdir'):
             path = cmd[6:]
