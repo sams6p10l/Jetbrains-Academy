@@ -1,4 +1,5 @@
 import os
+import glob
 import shutil
 os.chdir('module/root_folder')
 
@@ -17,9 +18,19 @@ while True:
                 print('Specify the file or directory')
                 continue
 
-            if "." in path:
+            if path.startswith('.'):
+                file_ext = path[1:]
+                files = glob.glob(f'*{file_ext}')
+                if not files:
+                    print(f'File extension {file_ext} not found in this directory')
+                for f in files:
+                    try:
+                        os.remove(f)
+                    except Exception as e:
+                        print(f'Error removing {f}: {e}')
+            elif os.path.isfile(path):
                 os.remove(path)
-            else:
+            elif os.path.isdir(path):
                 shutil.rmtree(path)
 
         elif cmd.startswith('cp'):

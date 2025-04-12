@@ -12,6 +12,55 @@ files:
   - name: tests.py
     visible: false
     learner_created: false
+  - name: module/root_folder/Test/r1.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme3.txt
+    visible: true
+    learner_created: true
+  - name: readme.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme666.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/readme99.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme2.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/r7.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme99.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/readme2.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme111.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/very_personal_image.jpg
+    visible: true
+    is_binary: true
+    learner_created: true
+  - name: module/root_folder/readme1.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test2/r1.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test2/r2.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test2/r3.txt
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/34451#comment
 check_profile: hyperskill_python
 status: Unchecked
