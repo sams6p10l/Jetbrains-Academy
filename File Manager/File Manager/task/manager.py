@@ -22,7 +22,7 @@ while True:
                 file_ext = path[1:]
                 files = glob.glob(f'*{file_ext}')
                 if not files:
-                    print(f'File extension {file_ext} not found in this directory')
+                    print(f"['File extension .{file_ext} not found in this directory']")
                 for f in files:
                     try:
                         os.remove(f)
@@ -32,21 +32,40 @@ while True:
                 os.remove(path)
             elif os.path.isdir(path):
                 shutil.rmtree(path)
+            else:
+                print('No such file or directory')
 
         elif cmd.startswith('cp'):
             arguments = cmd[3:]
             arguments = arguments.split(' ')
+
             if len(arguments) == 2:
                 source, destination = arguments
-                if source not in os.listdir():
-                    print('No such file or directory')
+                if not glob.glob(f'*{source}'):
+                    if source.startswith('.'):
+                        print(f'File extension {source} not found in this directory')
+                    else:
+                        print('No such file or directory2')
+
                 elif os.path.isdir(destination):
                     if source in os.listdir(destination):
                         print(f'{source} already exists in this directory')
+                    elif source.startswith('.'):
+                        file_ext = source[1:]
+                        files = glob.glob(f'*{file_ext}')
+                        # if not files:
+                        #    print(f'File extension {file_ext} not found in this directory')
+                        for f in files:
+                            try:
+                                shutil.copy2(f, destination)
+                            except Exception as e:
+                                print(f'Error removing {f}: {e}')
                     else:
                         shutil.copy2(source, destination)
                 else:
                     shutil.copy2(source, destination)
+
+
             elif len(arguments) > 2:
                 print('Specify the current name of the file or directory and the new location and/or name')
             else:
