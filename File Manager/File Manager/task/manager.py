@@ -45,7 +45,7 @@ while True:
                     if source.startswith('.'):
                         print(f'File extension {source} not found in this directory')
                     else:
-                        print('No such file or directory2')
+                        print('No such file or directory')
 
                 elif os.path.isdir(destination):
                     if source in os.listdir(destination):
@@ -57,7 +57,13 @@ while True:
                         #    print(f'File extension {file_ext} not found in this directory')
                         for f in files:
                             try:
-                                shutil.copy2(f, destination)
+                                if f in os.listdir():
+                                    if f in os.listdir(destination):
+                                        answer = input(f'{f} already exists in this directory. Replace? (y/n) ')
+                                        if answer == 'y':
+                                            shutil.copy2(f, destination)
+                                    else:
+                                        shutil.copy2(f, destination)
                             except Exception as e:
                                 print(f'Error removing {f}: {e}')
                     else:
@@ -76,19 +82,35 @@ while True:
             arguments = arguments.split(' ')
             if len(arguments) == 2:
                 first, second = arguments
-                if first not in os.listdir():
-                    print('No such file or directory')
-                    continue
-                elif os.path.isdir(second):
-                    if first in os.listdir(second):
-                        print(f'The file or directory already exists')
+                files = glob.glob(f'*{first}')
+
+                if not files:
+                    if first.startswith('.'):
+                        print(f'File extension {first} not found in this directory')
                     else:
-                        shutil.move(first, second)
-                        continue
+                        print('No such file or directory')
+
+                elif os.path.isdir(second):
+                    for f in files:
+                        try:
+                            if f in os.listdir():
+                                if f in os.listdir(second):
+                                    answer = input(f'{f} already exists in this directory. Replace? (y/n) ')
+                                    if answer == 'y':
+                                        os.remove(f'{second}/{f}')
+                                        shutil.move(f, second)
+                                        continue
+                                else:
+                                    shutil.move(f, second)
+                        except Exception as e:
+                            print(f'Error removing {f}: {e}')
+
+
                 elif second in os.listdir():
-                    print('The file or directory already exists2')
+                    print('The file or directory already exists')
                 else:
-                    shutil.move(first, second)
+                     shutil.move(first, second)
+                     continue
             else:
                 print('Specify the current name of the file or directory and the new location and/or name')
 

@@ -12,22 +12,14 @@ files:
   - name: tests.py
     visible: false
     learner_created: false
-  - name: module/root_folder/Test/r1.txt
-    visible: true
-    learner_created: true
-  - name: module/root_folder/Test/readme3.txt
-    visible: true
-    learner_created: true
   - name: readme.txt
     visible: true
     learner_created: true
-  - name: module/root_folder/Test/readme666.txt
+  - name: module/root_folder/very_personal_image.jpg
     visible: true
+    is_binary: true
     learner_created: true
-  - name: module/root_folder/Test/readme.txt
-    visible: true
-    learner_created: true
-  - name: module/root_folder/Test/readme2.txt
+  - name: module/root_folder/Test/r1.txt
     visible: true
     learner_created: true
   - name: module/root_folder/Test/r7.txt
@@ -36,41 +28,28 @@ files:
   - name: module/root_folder/Test/readme99.txt
     visible: true
     learner_created: true
-  - name: module/root_folder/readme2.txt
+  - name: module/root_folder/Test/readme2.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme666.txt
+    visible: true
+    learner_created: true
+  - name: module/root_folder/Test/readme3.txt
     visible: true
     learner_created: true
   - name: module/root_folder/Test/readme111.txt
     visible: true
     learner_created: true
-  - name: module/root_folder/very_personal_image.jpg
-    visible: true
-    is_binary: true
-    learner_created: true
-  - name: module/root_folder/Test2/readme99.txt
-    visible: true
-    learner_created: true
-  - name: module/root_folder/Test2/r0.txt
-    visible: true
-    learner_created: true
-  - name: module/root_folder/r0.txt
-    visible: true
-    learner_created: true
-  - name: module/root_folder/Test2/very_personal_image.jpg
-    visible: true
-    is_binary: true
-    learner_created: true
-  - name: module/root_folder/Test2/readme2.txt
+  - name: module/root_folder/readme2.txt
     visible: true
     learner_created: true
 feedback_link: https://hyperskill.org/learn/step/34451#comment
 check_profile: hyperskill_python
-status: Failed
+status: Solved
 feedback:
-  message: "Wrong answer in test #26\n\nWrong message returned. \nInput message: mv\
-    \ .bop calc \nYou printed: No such file or directory\n \nWe expected ['File extension\
-    \ .bop not found in this directory']\n\nPlease find below the output of your program\
-    \ during this failed test.\nNote that the '>' character indicates the beginning\
-    \ of the input line.\n\n---\n\n> mv .bop calc\nNo such file or directory\n\n----------------------------------------------------------------------\n\
-    Ran 1 test in 0.052s\n\nFAILED (failures=1)"
-  time: "Mon, 14 Apr 2025 11:55:44 UTC"
+  message: <html>Correct solution</html>
+  time: "Fri, 18 Apr 2025 14:26:15 UTC"
 record: -1
